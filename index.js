@@ -81,7 +81,7 @@ app.post('/send-email', (req, res) => {
     .send(`
     <script>
       window.alert('Mensaje envíado!')
-      window.location.href = 'http://localhost:3000/#Contact'
+      window.location.href = 'https://porfolio-nahuelfb.vercel.app/#Contact'
     </script>
   `)
   transporter.close()
