@@ -24,6 +24,10 @@ app.use((req, res, next) => {
   next();
 })
 
+app.get('/', (req, res) => {
+  res.send('Hola mundo')
+})
+
 app.post('/send-email', (req, res) => {
 
   const { name, company, subject, email, message } = req.body
