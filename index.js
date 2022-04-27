@@ -19,14 +19,6 @@ app.get('/', (req, res) => {
   res.send('Hola mundo')
 })
 
-app.get('/projects', (req, res) => {
-  res.json(data.projects)
-})
-
-app.get('/technologies', (req, res) => {
-  res.json(data.technologies)
-})
-
 app.post('/send-email', (req, res) => {
 
   const { name, company, subject, email, message } = req.body
@@ -58,7 +50,7 @@ app.post('/send-email', (req, res) => {
             <bold>Email:</bold> ${email || 'No ha sido ingresado'}
           </li>
         </ul>
-      <h1>Mensaje:</h1>
+      <h2>Mensaje:</h2>
         ${message}
       `
   }
