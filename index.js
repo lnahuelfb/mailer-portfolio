@@ -1,9 +1,7 @@
 const express = require('express')
 const nodemailer = require('nodemailer')
-require('dotenv').config()
 const cors = require('cors')
-
-const data = require('./data')
+require('dotenv').config()
 
 const app = express()
 
@@ -69,12 +67,6 @@ app.post('/send-email', (req, res) => {
   console.log(req.body)
   console.log(mailOptions)
   res.status(201)
-    .send(`
-    <script>
-      window.alert('Mensaje envíado!')
-      window.location.href = 'https://porfolio-nahuelfb.vercel.app/#Contact'
-    </script>
-  `)
   transporter.close()
 })
 
