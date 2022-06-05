@@ -5,11 +5,17 @@ require('dotenv').config()
 
 const app = express()
 
+const allowedOrigins = ['http://localhost:3000', 'https://nahuel.vercel.app']
+
+const corsOptions = {
+  origin: allowedOrigins
+}
+
 app.use(express.urlencoded({
   extended: false
 }))
 
-app.use(cors('*'))
+app.use(cors(corsOptions))
 
 app.use(express.json())
 
